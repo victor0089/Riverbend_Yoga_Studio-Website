@@ -1,4 +1,4 @@
-RIVERBEND YOGA STUDIO - TOUCHSTONE 3 (HTML + CSS)
+RIVERBEND YOGA STUDIO 
 
 Contents:
 - index.html, services.html, about.html, events.html: updated Touchstone 2 pages
