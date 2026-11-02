@@ -1,0 +1,262 @@
+/* Riverbend Yoga Studio | Touchstone 3 | Shared, mobile-first styles */
+/* Four-color palette: ivory, evergreen, sage, terracotta. Two font families: Arial and Georgia. */
+:root {
+  --ivory: #F8F7F2;
+  --evergreen: #25463B;
+  --sage: #DDE9DF;
+  --terracotta: #A54B38;
+  --reading-width: 70ch;
+  --site-width: 70rem;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--ivory);
+  color: var(--evergreen);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  -webkit-text-size-adjust: 100%;
+}
+img, picture, audio, video { max-width: 100%; }
+img { display: block; height: auto; }
+figure { margin: 0; }
+h1, h2, h3 {
+  font-family: Georgia, 'Times New Roman', serif;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+  margin: 0 0 0.9rem;
+}
+h1 { font-size: clamp(2rem, 6vw, 3.25rem); }
+h2 { font-size: clamp(1.55rem, 4vw, 2.2rem); }
+h3 { font-size: 1.25rem; }
+p { margin: 0 0 1rem; max-width: var(--reading-width); }
+a { color: var(--terracotta); text-decoration-thickness: 0.12em; text-underline-offset: 0.2em; }
+a:hover { text-decoration-thickness: 0.17em; }
+a:focus-visible, button:focus-visible, input:focus-visible,
+select:focus-visible, textarea:focus-visible, .table-scroll:focus-visible {
+  outline: 3px solid var(--terracotta);
+  outline-offset: 3px;
+}
+.skip-link {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.skip-link:focus {
+  position: fixed;
+  z-index: 1000;
+  top: 0.75rem;
+  left: 0.75rem;
+  width: auto;
+  height: auto;
+  padding: 0.8rem 1rem;
+  background: var(--ivory);
+  color: var(--evergreen);
+  border: 3px solid var(--terracotta);
+  border-radius: 0.45rem;
+}
+.site-header, .site-footer { background: var(--evergreen); color: var(--ivory); }
+.site-header { border-bottom: 5px solid var(--terracotta); }
+.site-header-inner, .site-footer-inner {
+  width: min(calc(100% - 2rem), var(--site-width));
+  margin-inline: auto;
+}
+.site-header-inner { display: flex; flex-direction: column; gap: 1rem; padding: 1.15rem 0; }
+.brand { margin: 0; font-family: Georgia, 'Times New Roman', serif; font-size: 1.4rem; line-height: 1.3; }
+.brand strong { font-weight: 700; }
+.nav-list { margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.3rem 0.45rem; list-style: none; }
+.nav-list a {
+  display: inline-block;
+  padding: 0.48rem 0.7rem;
+  color: var(--ivory);
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  line-height: 1.35;
+}
+.nav-list a:hover, .nav-list a[aria-current='page'] { background: var(--sage); color: var(--evergreen); }
+.nav-list a:focus-visible { outline-color: var(--ivory); }
+.site-main { width: min(calc(100% - 2rem), var(--site-width)); margin: 0 auto; padding: 2rem 0 3.5rem; }
+.site-footer-inner { padding: 1.5rem 0; }
+.site-footer p { margin: 0; font-size: 0.92rem; }
+.page-intro { max-width: 52rem; padding: 0.4rem 0 0.8rem; }
+.page-intro h1 { color: var(--evergreen); }
+.page-intro p { font-size: 1.1rem; }
+.content-section { margin: 1.8rem 0; }
+.content-section > h2 { margin-bottom: 1rem; }
+.panel { padding: 1.3rem; background: var(--sage); border-radius: 1.1rem; }
+.panel p:last-child, .class-card p:last-child, .bio-card p:last-child { margin-bottom: 0; }
+.text-link { font-weight: 700; }
+
+/* Home - flexible hero and featured class (mobile: stacked). */
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background: var(--sage);
+  border-radius: 1.35rem;
+  overflow: hidden;
+  padding: 1.5rem;
+  margin: 0 0 2rem;
+}
+.hero-copy { align-self: center; flex: 1 1 0; }
+.hero-copy h1 { margin-bottom: 1.1rem; }
+.hero-copy h2 { font-size: clamp(1.25rem, 3vw, 1.6rem); }
+.hero-copy p { font-size: 1.06rem; }
+.hero-media { flex: 1 1 0; min-width: 0; }
+.hero-image, .feature-image, .instructor-image, .workshop-image {
+  width: 100%; object-fit: cover; border-radius: 0.9rem; background: var(--sage);
+}
+.hero-image { max-height: 23rem; }
+.feature-section { display: flex; flex-direction: column; gap: 1.2rem; align-items: center; }
+.feature-content, .feature-media { flex: 1 1 0; min-width: 0; width: 100%; }
+.feature-image { max-height: 23rem; }
+.breathing-panel {
+  padding: 1.4rem;
+  border-radius: 1rem;
+  border: 2px solid var(--sage);
+}
+.breathing-player { display: block; width: 100%; max-width: 32rem; margin: 0.9rem 0 1.2rem; }
+.table-scroll { overflow-x: auto; padding: 0 0 0.4rem; }
+table { border-collapse: collapse; width: 100%; min-width: 21rem; text-align: left; }
+caption { padding-bottom: 0.65rem; font-weight: 700; text-align: left; }
+th, td { padding: 0.75rem 0.65rem; border-bottom: 1px solid var(--evergreen); vertical-align: top; }
+thead th { background: var(--evergreen); color: var(--ivory); }
+
+/* Services - flex card layouts, calm pricing panels. */
+.class-grid { display: flex; flex-direction: column; gap: 1rem; }
+.class-card {
+  flex: 1 1 0;
+  padding: 1.35rem;
+  border: 2px solid var(--sage);
+  border-top: 5px solid var(--terracotta);
+  border-radius: 0.9rem;
+  min-width: 0;
+}
+.class-card h3 { margin-bottom: 0.7rem; }
+.pricing-list, .policy-list, .workshop-list { padding-left: 1.3rem; }
+.pricing-list li, .policy-list li, .workshop-list li { margin-bottom: 0.65rem; }
+.help-panel { padding: 1.3rem; border-left: 5px solid var(--terracotta); }
+
+/* About - photo and short instructor biographies. */
+.instructor-row { display: flex; flex-direction: column; gap: 1rem; }
+.instructor-media { flex: 0 1 19rem; min-width: 0; }
+.instructor-image { max-height: 24rem; }
+.instructor-bios { flex: 1 1 0; display: flex; flex-direction: column; gap: 1rem; }
+.bio-card { padding: 1rem 1.2rem; border-radius: 0.85rem; background: var(--sage); }
+.content-note { font-size: 0.9rem; margin-top: 1rem; font-style: italic; }
+
+/* Events - workshop figure and accessible contact form. */
+.workshop-figure { margin: 1.2rem 0; max-width: 42rem; }
+.workshop-figure figcaption { padding: 0.75rem 0.2rem; font-size: 0.96rem; }
+.workshop-image { max-height: 22rem; }
+.workshop-list { max-width: 56rem; }
+.form-section { background: var(--sage); border-radius: 1.15rem; padding: 1.3rem; }
+.interest-form { margin-top: 1.3rem; }
+.interest-form fieldset { border: 2px solid var(--evergreen); padding: 1rem; border-radius: 0.7rem; margin: 0 0 1.15rem; min-width: 0; }
+.interest-form legend { padding: 0 0.5rem; font-weight: 700; }
+.interest-form fieldset fieldset { margin-top: 1.1rem; border-color: var(--terracotta); }
+.interest-form p { max-width: none; }
+.interest-form label { display: block; font-weight: 600; margin-bottom: 0.35rem; }
+.interest-form input:not([type='radio']),
+.interest-form select, .interest-form textarea {
+  width: 100%; max-width: 100%; display: block; min-width: 0;
+  padding: 0.72rem 0.8rem;
+  color: var(--evergreen);
+  background: var(--ivory);
+  border: 2px solid var(--evergreen);
+  border-radius: 0.45rem;
+  font: inherit;
+}
+.interest-form textarea { resize: vertical; min-height: 7.5rem; }
+.field-grid { display: flex; flex-direction: column; gap: 0.4rem; }
+.field-grid > p { flex: 1 1 0; min-width: 0; }
+.interest-form .radio-choice { display: flex; align-items: flex-start; gap: 0.5rem; margin: 0.5rem 0; }
+.radio-choice input { flex: 0 0 auto; width: 1.1rem; height: 1.1rem; accent-color: var(--evergreen); margin: 0.3rem 0 0; }
+.interest-form .radio-choice label { margin: 0; font-weight: 400; }
+.submit-button {
+  background: var(--terracotta);
+  border: 2px solid var(--terracotta);
+  border-radius: 0.55rem;
+  padding: 0.82rem 1.25rem;
+  min-height: 2.9rem;
+  color: var(--ivory);
+  font: 700 1rem Arial, Helvetica, sans-serif;
+  cursor: pointer;
+}
+.submit-button:hover { background: var(--evergreen); border-color: var(--evergreen); }
+
+/* Tablet and desktop: nav stays in a row, classes use columns, media aligns beside copy. */
+@media (min-width: 48rem) {
+  .site-main { padding-top: 2.75rem; padding-bottom: 4.5rem; }
+  .site-header-inner { flex-direction: row; align-items: center; justify-content: space-between; gap: 1.5rem; }
+  .nav-list { justify-content: flex-end; }
+  .panel, .form-section { padding: 2rem; }
+  .hero { flex-direction: row; gap: 2.3rem; padding: 2.2rem; }
+  .hero-image { min-height: 20rem; }
+  .feature-section { flex-direction: row; gap: 2rem; align-items: center; }
+  .class-grid { flex-direction: row; align-items: stretch; }
+  .instructor-row { flex-direction: row; gap: 1.5rem; align-items: flex-start; }
+  .field-grid { flex-direction: row; gap: 1rem; }
+}
+@media (min-width: 64rem) {
+  .hero { padding: 2.75rem; }
+  .page-intro { padding-bottom: 1.25rem; }
+  .content-section { margin-top: 2.5rem; margin-bottom: 2.5rem; }
+  .form-section { padding: 2.4rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+
+/* Touchstone 4 enhancements: uses the existing four colors and two fonts. */
+.preference-panel { border-left: 6px solid var(--terracotta); }
+.preference-result {
+  margin: 0.8rem 0 1rem;
+  padding: 1rem 1.2rem;
+  border-radius: 0.6rem;
+  background: var(--ivory);
+  border: 2px solid var(--evergreen);
+  min-height: 4.5rem;
+}
+.preference-actions { display: flex; flex-direction: column; align-items: flex-start; gap: 0.8rem; margin: 1rem 0; }
+.preference-button, .quiet-button, .action-link {
+  display: inline-block;
+  font: 700 0.95rem Arial, Helvetica, sans-serif;
+  border-radius: 0.55rem;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  line-height: 1.35;
+}
+.preference-button { color: var(--ivory); background: var(--evergreen); border: 2px solid var(--evergreen); }
+.preference-button[aria-pressed='true'] { background: var(--terracotta); border-color: var(--terracotta); }
+.preference-button:hover { background: var(--terracotta); border-color: var(--terracotta); }
+.quiet-button { color: var(--evergreen); background: var(--ivory); border: 2px solid var(--evergreen); }
+.quiet-button:disabled { opacity: 0.55; cursor: not-allowed; }
+.action-link { color: var(--ivory); background: var(--terracotta); border: 2px solid var(--terracotta); text-decoration: none; }
+.action-link:hover { background: var(--evergreen); border-color: var(--evergreen); }
+.storage-note { font-size: 0.93rem; margin: 0.75rem 0 0; }
+.remembered-note {
+  background: var(--ivory); border-left: 5px solid var(--terracotta);
+  border-radius: 0.3rem; padding: 0.85rem 1rem; margin: 1rem 0;
+}
+.interest-form .field-error { color: var(--terracotta); display: block; font-weight: 700; min-height: 1.25rem; font-size: 0.91rem; margin: 0.3rem 0 0; line-height: 1.4; }
+.interest-form [aria-invalid='true'] { border-color: var(--terracotta) !important; outline: 2px solid var(--terracotta); outline-offset: 1px; }
+.interest-form .group-error { margin: 0.6rem 0 0; }
+.submission-feedback {
+  background: var(--ivory); border: 2px solid var(--evergreen);
+  border-left: 6px solid var(--evergreen); border-radius: 0.55rem;
+  margin-top: 1rem; padding: 1rem 1.2rem; font-weight: 700;
+}
+.submission-feedback.feedback-error { border-color: var(--terracotta); }
+.submission-feedback[hidden] { display: none; }
+@media (min-width: 48rem) {
+  .preference-actions { flex-direction: row; align-items: center; flex-wrap: wrap; }
+}
