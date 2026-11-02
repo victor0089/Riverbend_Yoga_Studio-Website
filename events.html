@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta content="Explore Riverbend Yoga Studio's monthly workshop ideas and request information or a place at an event." name="description"/>
+  <title>
+   Workshops and Requests | Riverbend Yoga Studio
+  </title>
+  <link href="styles.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <a class="skip-link" href="#main-content">
+   Skip to main content
+  </a>
+  <header class="site-header">
+   <div class="site-header-inner">
+    <p class="brand">
+     <strong>
+      Riverbend Yoga Studio
+     </strong>
+    </p>
+    <nav aria-label="Main navigation" class="site-nav">
+     <ul class="nav-list">
+      <li>
+       <a href="index.html">
+        Home
+       </a>
+      </li>
+      <li>
+       <a href="services.html">
+        Classes and Pricing
+       </a>
+      </li>
+      <li>
+       <a href="about.html">
+        Our Instructors and Studio
+       </a>
+      </li>
+      <li>
+       <a aria-current="page" href="events.html">
+        Workshops and Requests
+       </a>
+      </li>
+     </ul>
+    </nav>
+   </div>
+  </header>
+  <main class="site-main" id="main-content">
+   <div class="page-intro">
+    <h1 class="page-title">
+     Workshops and Class Requests
+    </h1>
+   </div>
+   <section aria-labelledby="workshops-title" class="content-section workshops-section">
+    <h2 id="workshops-title">
+     November 2026 workshop list
+    </h2>
+    <p>
+     This is an illustrative monthly calendar for the course project;
+        request confirmed times and availability before attending.
+    </p>
+    <figure class="workshop-figure">
+     <img alt="Participants practicing yoga together in a group workshop setting." class="workshop-image" loading="lazy" src="assets/yoga-workshop.png"/>
+     <figcaption>
+      Community workshops give students time to learn, ask
+          questions, and move at a comfortable pace.
+     </figcaption>
+    </figure>
+    <ul class="workshop-list">
+     <li>
+      <strong>
+       November 7:
+      </strong>
+      Yoga Foundations - basic postures,
+          breathing, and beginner questions.
+     </li>
+     <li>
+      <strong>
+       November 15:
+      </strong>
+      Mindful Breathing - practical,
+          accessible relaxation techniques.
+     </li>
+     <li>
+      <strong>
+       November 21:
+      </strong>
+      Rest and Restore - supported poses
+          and a gentle end-of-week reset.
+     </li>
+    </ul>
+   </section>
+   <section aria-labelledby="request-title" class="content-section form-section">
+    <h2 id="request-title">
+     Request a spot or ask a question
+    </h2>
+    <p>
+     Use this interest form to tell us what you would like to learn about.
+        Fields marked required must be completed.
+    </p>
+    <p>
+     <strong>
+      Course demonstration:
+     </strong>
+     This HTML-only form validates
+        entries in the browser but does not send information to a studio server.
+    </p>
+    <form action="#" class="interest-form" method="post">
+     <fieldset>
+      <legend>
+       Your contact details
+      </legend>
+      <div class="field-grid">
+       <p>
+        <label for="full-name">
+         Full name (required)
+        </label>
+        <input autocomplete="name" id="full-name" maxlength="80" minlength="2" name="full-name" required="" type="text"/>
+       </p>
+       <p>
+        <label for="email">
+         Email address (required)
+        </label>
+        <input autocomplete="email" id="email" maxlength="120" name="email" required="" type="email"/>
+       </p>
+       <p>
+        <label for="phone">
+         Phone number (optional; include if you prefer a call)
+        </label>
+        <input autocomplete="tel" id="phone" name="phone" pattern="[0-9()+ .-]{7,20}" title="Use 7 to 20 phone-number characters" type="tel"/>
+       </p>
+      </div>
+     </fieldset>
+     <fieldset>
+      <legend>
+       Your yoga interests
+      </legend>
+      <p>
+       <label for="interest">
+        Class or event of interest (required)
+       </label>
+       <select id="interest" name="interest" required="">
+        <option value="">
+         Choose a class or workshop
+        </option>
+        <option value="gentle">
+         Gentle Yoga
+        </option>
+        <option value="vinyasa">
+         Vinyasa Flow
+        </option>
+        <option value="restorative">
+         Restorative Yoga
+        </option>
+        <option value="private">
+         Private Session
+        </option>
+        <option value="foundations">
+         Yoga Foundations Workshop
+        </option>
+        <option value="breathing">
+         Mindful Breathing Workshop
+        </option>
+        <option value="restore">
+         Rest and Restore Workshop
+        </option>
+       </select>
+      </p>
+      <fieldset>
+       <legend>
+        Experience level (required)
+       </legend>
+       <p class="radio-choice">
+        <input id="level-new" name="experience" required="" type="radio" value="beginner"/>
+        <label for="level-new">
+         New to yoga
+        </label>
+       </p>
+       <p class="radio-choice">
+        <input id="level-some" name="experience" type="radio" value="some"/>
+        <label for="level-some">
+         Some experience
+        </label>
+       </p>
+       <p class="radio-choice">
+        <input id="level-regular" name="experience" type="radio" value="regular"/>
+        <label for="level-regular">
+         Regular practitioner
+        </label>
+       </p>
+      </fieldset>
+      <fieldset>
+       <legend>
+        Preferred contact method (required)
+       </legend>
+       <p class="radio-choice">
+        <input id="contact-email" name="contact-method" required="" type="radio" value="email"/>
+        <label for="contact-email">
+         Email
+        </label>
+       </p>
+       <p class="radio-choice">
+        <input id="contact-phone" name="contact-method" type="radio" value="phone"/>
+        <label for="contact-phone">
+         Phone (provide a number above)
+        </label>
+       </p>
+      </fieldset>
+      <p>
+       <label for="message">
+        Questions or access requests (required)
+       </label>
+       <textarea cols="40" id="message" maxlength="1000" minlength="10" name="message" required="" rows="5"></textarea>
+      </p>
+     </fieldset>
+     <p>
+      <button class="submit-button" type="submit">
+       Request a spot
+      </button>
+     </p>
+    </form>
+   </section>
+  </main>
+  <footer class="site-footer">
+   <div class="site-footer-inner">
+    <p>
+     &copy; 2026 Riverbend Yoga Studio. Everyone is welcome to explore at
+      their own pace.
+    </p>
+   </div>
+  </footer>
+ </body>
+</html>
+
